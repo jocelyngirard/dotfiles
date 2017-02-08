@@ -1,4 +1,7 @@
-# Shift focus
+# Enable kwm compatibility mode
+khd kwm on
+
+# Change focus
 lcmd - up : kwmc window -f north
 lcmd - right : kwmc window -f east
 lcmd - down : kwmc window -f south
@@ -10,14 +13,10 @@ lcmd + shift - right : kwmc window -s east
 lcmd + shift - down : kwmc window -s south
 lcmd + shift - left : kwmc window -s west
 
-# Move window
-lalt + shift - up : kwmc window -m north
-lalt + shift - right : kwmc window -m east
-lalt + shift - down : kwmc window -m south
-lalt + shift - left : kwmc window -m west
-
 # Open terminal with alt-enter
 lcmd - return : open -na /Applications/Utilities/Terminal.app
+
+### Change window modes
 
 # Toggle split mode
 lalt - s : kwmc window -c split-mode toggle
@@ -27,3 +26,18 @@ lalt - f : kwmc window -z fullscreen
 
 # Float mode
 lcmd + shift - f : kwmc window -t focused
+
+### Change desktop space modes
+
+# Set Space Tiling Mode To BSP
+lalt + shift - a : kwmc space -t bsp
+
+# Set Space Tiling Mode To Monocle
+lalt + shift - s : kwmc space -t monocle
+
+# Set Space Tiling Mode To Floating
+lalt + shift - d : kwmc space -t float
+
+# Move Focused Window To Space
+lalt + shift - left : kwmc window -m space left
+lalt + shift - right : kwmc window -m space right
